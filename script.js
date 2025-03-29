@@ -25,7 +25,12 @@ function closePopup() {
 
 document.getElementById("overlay").addEventListener("click", function() {
     closePopup();
+    closeSecondDiv();
 });
+
+function closeButton() {
+    closePopup();
+}
 
 function displaySocial() {
     if (social.style.display === "none") {
@@ -35,4 +40,24 @@ function displaySocial() {
         document.getElementById("overlay").style.display = "none";
         social.style.display = "none";
     }
+}
+
+let copyLink = document.getElementById("copy_link");
+let copyButton = document.getElementById("copy_button");
+
+function copy() {
+    copyLink.select();
+    document.execCommand('copy');
+    copyButton.innerText = 'Copied !';
+}
+
+function closeSecondDiv() {
+    social.style.display = "none";
+}
+
+function like() {
+    like.addEventListener("mouseenter", function() {
+        like.classList.add("animate");
+    });
+    console.log("To make");
 }

@@ -17,7 +17,7 @@
 
     <div class="overlay" id="overlay"></div>
     <div id="popup" style="display: none;">
-        <button id="fermer">⨯</button>
+        <button id="fermer" onclick="closeButton()">⨯</button>
         <h2>Browse feeds</h2>
         <input type="search" placeholder="Type something">
     </div>
@@ -35,21 +35,20 @@
                 </video>
             </div>
             <div class="act_div">
-                <button class="act_buttons" id="like">🖒</button>
+                <button class="act_buttons" id="like">🖏</button>
                 <button class="act_buttons">⤓</button>
                 <button class="act_buttons" onclick="displaySocial()">⮩</button>
                 <button class="act_buttons">...</button>
             </div>
             <div id="social" style="display: none;">
-                <span>Video title</span>
-                <div>
-                    <p>*Link here*</p><button>Copy</button><br>
-                <div class="social_list">
+                <h2>Video title</h2>
+                <div class="copy_div">
+                    <textarea id="copy_link">*Link here*</textarea><button id="copy_button" onclick="copy()">Copy</button>
                 </div>
                 <h3>Share on :</h3>
                 <div class="social_list">
                     <button>Next Wave</button><br>
-                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Check this vid : " data-show-count="false" target="_blank">Tweet</a><br>
+                    <button>X</button><br>
                     <button>What'sApp</button><br>
                     <button>Html</button>
                 </div>
@@ -79,8 +78,8 @@
         </button>
     </main>
 
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Check this vid : " data-show-count="false">Tweet</a>
-
     <script src="script.js"></script>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </body>
 </html>
