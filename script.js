@@ -61,3 +61,27 @@ function like() {
     });
     console.log("To make");
 }
+
+let testId = document.getElementById("url_test").value;
+
+function setTwitterUrl(url) {
+    let tweetUrl = encodeURI("Check this vid" + url);
+    tweetUrl = "https://x.com/intent/post?url=" + tweetUrl;
+    return tweetUrl;
+}
+
+let postInfos = {
+    postUrl: "url",
+    videoSrc: "url",
+    title: "title",
+    date: "date",
+    description: "text",
+    account: "account",
+    isLiked: "true_or_false",
+    isBookmark: "t_f",
+    numberOfLikes: "number",
+    numberOfViews: "number",
+    numberOfRt: "number",
+    numberOfDownloads: "number",
+    comments: "for_later"
+}
