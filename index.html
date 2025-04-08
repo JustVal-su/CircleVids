@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CircleVids</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CircleVids</h1>
+        <a href="Upload_new.html">⨁</a>
+        <p>⨁U+2A01  ⮋U+2B8B</p>
+    </header>
+
+    <div id="sidebar"><button>⌂</button></div>
+
+    <div class="overlay" id="overlay"></div>
+    <div id="popup" style="display: none;">
+        <button id="fermer" onclick="closeButton()">⨯</button>
+        <h2>Browse feeds</h2>
+        <input type="search" placeholder="Type something">
+    </div>
+
+    <main>
+        <div id="feeds">
+            <button>Code</button>
+            <button onclick="newFeed()">Add your feeds</button>
+        </div>
+
+        <!--controlsList="nofullscreen nodownload"-->
+        <div class="full_post">
+            <div class="post">
+                <video src="Placeholder.mp4" controls>
+                </video>
+            </div>
+            <div class="title_pfp">
+                <a><img src="placeholder_img.png" alt="pfp" class="pfp"></a><p>Hello world</p>
+            </div>
+            <div class="act_div">
+                <button class="act_buttons like" id="like">🖏</button>
+                <button class="act_buttons">⤓</button>
+                <button class="act_buttons" onclick="displaySocial()">⮩</button>
+                <button class="act_buttons">...</button>
+            </div>
+            <div id="social" class="social" style="display: none;">
+                <h2>Video title</h2>
+                <div class="copy_div">
+                    <textarea id="copy_link" readonly="readonly">*Link here*</textarea><button id="copy_button" onclick="copy()">Copy</button>
+                </div>
+                <h3>Share on :</h3>
+                <div class="social_list">
+                    <button>Next Wave</button><br>
+                    <button>X</button><br>
+                    <button>What'sApp</button><br>
+                    <button>Html</button>
+                </div>
+            </div>
+            <p id="url_test">zttps://circle.video/dummy_video</p>
+        </div>
+
+        <!-- Created with Inkscape (http://www.inkscape.org/) -->
+        <button class="act_buttons svg">
+            <svg
+            width="24"
+            height="24"
+            viewBox="0 0 210 210"
+            version="1.1"
+            id="svg1"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="layer1">
+              <path
+                id="path1-2"
+                fill="#000000"
+                fill-opacity="1"
+                fill-rule="nonzero"
+                stroke="none"
+                d="m 125.88017,0 v 29.620931 c 20.48303,7.536341 36.66714,23.621397 44.32908,44.057776 h 29.62403 C 190.30403,37.57902 162.03679,9.4166679 125.88017,0 Z M 73.956209,0.21083984 C 37.933207,9.654969 9.7685507,37.713249 0.20980632,73.678707 H 29.974398 C 37.620067,53.409311 53.656728,37.435959 73.956209,29.870528 Z M 0,125.56029 c 9.3015746,36.37952 37.611514,64.86057 73.956209,74.40322 V 170.12915 C 53.390501,162.46526 37.213676,146.17777 29.690177,125.56029 Z m 170.3095,0 c -7.54428,20.67479 -23.78872,36.99254 -44.42933,44.62984 v 29.81007 c 36.41735,-9.49743 64.80149,-38.00406 74.12003,-74.43991 z"
+                transform="scale(1.049999)" />
+            </g>
+          </svg>
+        </button>
+    </main>
+    
+    <script src="script.js"></script>
+    <script type="module" src="/index.js"></script>
+</body>
+</html>
