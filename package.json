@@ -9,8 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4"
+  },
   "devDependencies": {
-    "@supabase/supabase-js": "^2.49.4",
     "vite": "^6.2.6"
   }
 }

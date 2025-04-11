@@ -5,7 +5,6 @@
 body {
     background-color: light-dark(rgb(243, 243, 243), rgb(13, 17, 23));
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 h1 {
@@ -205,4 +204,11 @@ body::-webkit-scrollbar-thumb {
 
 .full_post div {
     margin: 0;
+}
+
+#posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
 }

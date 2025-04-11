@@ -100,6 +100,8 @@ function createPost(object) {
     let feeds = document.getElementById("feeds");
     let main = document.querySelector("main");
     let post = document.createElement("div");
+    let posts = document.getElementById("posts");
+    let none = document.getElementById("none");
     post.classList.add("post");
     let fullPost = document.createElement("div");
     fullPost.classList.add("fullPost")
@@ -109,7 +111,7 @@ function createPost(object) {
     newVideo.controls = true;
     post.appendChild(newVideo);
     fullPost.appendChild(post);
-    main.appendChild(fullPost);
+    posts.appendChild(fullPost);
     let titleAndPfp = document.createElement("div");
     titleAndPfp.classList.add("title_pfp");
     let pfpLink = document.createElement("a");
@@ -144,5 +146,5 @@ function createPost(object) {
     buttonFour.innerHTML = "...";
     actDiv.appendChild(buttonFour);
     fullPost.appendChild(actDiv);
-    main.insertBefore(fullPost, feeds);
+    posts.insertBefore(fullPost, none);
 }
