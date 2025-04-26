@@ -8,12 +8,24 @@
 </head>
 <body>
     <header>
-        <h1>CircleVids</h1>
-        <a href="Upload_new.html">⨁</a>
-        <p>⨁U+2A01  ⮋U+2B8B</p>
+        <div>
+            <h1>CircleVids</h1>
+        </div>
+        <div>
+            <input type="search">
+            <a href="dm.html">DM</a>
+            <a href="Upload_new.html">⨁</a>
+            <button id="profile_button" onclick="displayPannel()">🖼</button>
+        </div>
     </header>
 
-    <div id="sidebar"><button>⌂</button></div>
+    <div id="side_pannel" style="display: none;">
+        <div>
+            <ul>
+                <li><a href="#">Your profile</a></li>
+            </ul>
+        </div>
+    </div>
 
     <div class="overlay" id="overlay"></div>
     <div id="popup" style="display: none;">
@@ -86,6 +98,6 @@
     </main>
     
     <script src="script.js"></script>
-    <script type="module" src="/index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html>

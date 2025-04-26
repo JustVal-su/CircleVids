@@ -1,6 +1,7 @@
 let popup = document.getElementById("popup");
 let social = document.getElementById("social");
 let likeButton = document.getElementById("like");
+let sidePannel = document.getElementById("side_pannel");
 
 function newFeed() {
     if (popup.style.display === "none") {
@@ -26,6 +27,7 @@ function closePopup() {
 document.getElementById("overlay").addEventListener("click", function() {
     closePopup();
     closeSecondDiv();
+    closePannel();
 });
 
 function closeButton() {
@@ -147,4 +149,16 @@ function createPost(object) {
     actDiv.appendChild(buttonFour);
     fullPost.appendChild(actDiv);
     posts.insertBefore(fullPost, none);
+}
+
+let profileButton = document.getElementById("profile_button");
+
+function displayPannel() {
+    document.getElementById("overlay").style.display = "block";
+    sidePannel.style.display = "block";
+
+}
+
+function closePannel() {
+    sidePannel.style.display = "none";
 }
